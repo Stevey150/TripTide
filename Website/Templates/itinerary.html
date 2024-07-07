@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Itinerary</title>
+</head>
+<body>
+    <h1>Your Itinerary</h1>
+    {% if itinerary is string %}
+        <p>{{ itinerary }}</p>
+    {% else %}
+        {% for day_plan in itinerary %}
+            <h2>Day {{ day_plan.day }}:</h2>
+            <ul>
+                {% for activity in day_plan.activities %}
+                    <li>{{ activity }}</li>
+                {% endfor %}
+            </ul>
+        {% endfor %}
+    {% endif %}
+    <a href="/">Back to Home</a>
+</body>
+</html>
