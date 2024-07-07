@@ -1,8 +1,0 @@
-# Redirect root path to /generate
-/ /generate 301
-
-# Redirect /home to /generate
-/home /generate 301
-
-# SPA rule for handling all other routes
-/* /index.html 200
