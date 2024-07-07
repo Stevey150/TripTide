@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belgium Visit Duration</title>
+</head>
+<body>
+    <h1>Select Your Visit Duration in Belgium</h1>
+    <form action="/get_csv" method="post">
+        <label for="days">Number of Days:</label>
+        <input type="number" id="days" name="days" min="1" max="10" required>
+        <br><br>
+        <input type="submit" value="Get CSV File">
+    </form>
+</body>
+</html>
